@@ -175,8 +175,7 @@
 .header__thongbao-des {
   font-size: 1.2rem;
 }
-.header__thongbao-item {
-}
+/*  */
 .header__thongbao-item--viewed {
   background-color: rgba(238, 75, 43, 0.1);
 }
