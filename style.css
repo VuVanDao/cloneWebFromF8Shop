@@ -1,0 +1,197 @@
+.header {
+  height: 120px;
+  background-image: linear-gradient(0, #fe6433, #f53e2d);
+}
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.header__navbar-list {
+  list-style: none;
+}
+.header__navbar-item {
+  margin: 8px 8px 0 8px;
+  position: relative;
+  min-height: 26px;
+}
+.header__navbar-item,
+.header__navbar-item-link {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: var(--white-color);
+  /* text-decoration: bo dau gach chan */
+  text-decoration: none;
+  font-weight: 300;
+}
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon-link {
+  display: inline-flex;
+  align-items: center;
+}
+.header__navbar-item:hover,
+.header__navbar-item-link:hover {
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+.header__navbar-item-bold {
+  font-weight: 500;
+}
+.header__navbar-item-gach::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 20px;
+  width: 1px;
+  /* top: 1px; */
+  right: -10px;
+  transform: translateY(1%);
+  border-radius: 1px;
+  background-color: var(--white-color);
+}
+.header__navbar-icon-link {
+  text-decoration: none;
+}
+.header__navbar-icon-link:hover {
+  opacity: 0.7;
+}
+.header__navbar-icon {
+  color: var(--white-color);
+  font-size: 1.8rem;
+  margin: 0 5px;
+}
+.header__navbar-title-nopointer:hover {
+  cursor: default;
+  color: var(--white-color);
+}
+
+/* ---------------- qr code --------------------- */
+.header__qr {
+  background-color: var(--white-color);
+  width: 185px;
+  position: absolute;
+  left: 0;
+  top: 120%;
+  border-radius: 2px;
+  padding: 8px;
+  /* display: none; */
+  display: none;
+  border: 1px solid black;
+  /* animation: hahaha 1s linear; */
+  /* transition: display 1s; */
+}
+.header__qr-img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.header__qr-apps {
+  display: flex;
+  /* gap: 5px; */
+  justify-content: space-between;
+}
+.header__qr::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 15px;
+  left: 0;
+  top: -5px;
+}
+.header__qr-link:nth-child(1) {
+  margin-left: 11px;
+}
+.header__qr-link:nth-child(2) {
+  margin-right: 11px;
+}
+.header__qr-dowload-img {
+  height: 16px;
+}
+.header__navbar-item-gach:hover .header__qr {
+  /* display: block; */
+  display: block;
+}
+/* ----------------------------------------- thong bao ----------------------------------- */
+.header__thongbao {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  width: 404px;
+  background-color: var(--white-color);
+  border: 1px #d3d3d3 solid;
+  display: none;
+  cursor: default;
+  transform-origin: right top; /* xac dinh tam cua tranform la o dau*/
+}
+.header__thongbao::after {
+  content: "";
+  border: 20px solid;
+  border-color: transparent transparent var(--white-color) transparent;
+  /* background-color: #f53e2d; */
+  position: absolute;
+  top: -30px;
+  right: 15px;
+}
+.header__thongbao::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: -15px;
+  width: 90px;
+  height: 15px;
+  /* background-color: #f53e2d; */
+}
+.header__thongbao-header {
+  height: 40px;
+  background-color: var(--white-color);
+  color: #f53e2d;
+  line-height: 40px;
+  margin-left: 12px;
+}
+.header__thongbao-list {
+  padding-left: 0;
+}
+.header__thongbao-img {
+  width: 48px;
+  object-fit: contain;
+}
+.header__thongbao-link {
+  display: flex;
+  padding: 12px;
+}
+.header__thongbao-info {
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.header__thongbao-name {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--black-color);
+}
+.header__thongbao-des {
+  font-size: 1.2rem;
+}
+.header__thongbao-item {
+}
+.header__thongbao-item--viewed {
+  background-color: rgba(238, 75, 43, 0.1);
+}
+.header__thongbao-item:hover {
+  background-color: #f7f7f7;
+}
+.header__thongbao-footer {
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+.header__thongbao-footer--btn {
+  padding: 0 20px;
+}
+.header__navbar-item:hover .header__thongbao {
+  animation: hihihi 0.5s;
+  display: block;
+}

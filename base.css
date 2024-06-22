@@ -1,0 +1,58 @@
+:root {
+  --primary-color: #ee4d2d;
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+}
+* {
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+.grid {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  /* background-color: #fff; */
+}
+.grid_full-width {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+.grid_row {
+  display: flex;
+  flex-wrap: wrap;
+}
+@keyframes hehehe {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hahaha {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+@keyframes hihihi {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
