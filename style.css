@@ -8,11 +8,25 @@
 }
 .header__navbar-list {
   list-style: none;
+  display: flex;
 }
 .header__navbar-item {
   margin: 8px 8px 0 8px;
   position: relative;
   min-height: var(--header-navber-height);
+}
+.header__navbar-user {
+  display: flex;
+}
+.header__navbar-user-img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.header__navbar-user-name {
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 .header__navbar-item,
 .header__navbar-item-link {
@@ -86,7 +100,7 @@
 }
 .header__qr-apps {
   display: flex;
-  /* gap: 5px; */
+
   justify-content: space-between;
 }
 .header__qr::before {
@@ -334,6 +348,72 @@
   width: 140px;
   height: 60px;
   font-size: 20px;
+  position: relative;
+  cursor: default;
+}
+
+.header__cart-list {
+  position: absolute;
+  right: 50px;
+  top: 90%;
+  background-color: var(--white-color);
+  border-radius: 2px;
+  /* border: 1px solid var(--black-color); */
+  box-shadow: 0 1px 10px var(--black-color);
+  display: none;
+  animation: fadein ease-in 0.25s;
+}
+
+.header__cart-list::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: -35px;
+  border-width: 20px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+.header__cart-no-cart-img {
+  width: 410px;
+  height: 130px;
+  object-fit: contain;
+  padding: 15px;
+  display: none;
+}
+.header__cart-no-cart-meseage {
+  color: var(--black-color);
+  font-size: 1.4rem;
+  display: none;
+  justify-content: center;
+}
+.header__cart-warp {
+  padding: 8px;
+  /* transform-origin: right top; */
+  cursor: pointer;
+}
+.header__cart-logo:hover {
+  cursor: pointer;
+}
+.header__cart-warp:hover .header__cart-list {
+  display: block;
+  cursor: default;
+}
+.header__cart-list-no-cart .header__cart-no-cart-img {
+  display: block;
+}
+.header__cart-list-no-cart .header__cart-no-cart-meseage {
+  display: flex;
+}
+.header__cart-notice {
+  position: absolute;
+  padding: 2px 6px;
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  border-radius: 10px;
+  top: 6px;
+  right: 45px;
+  border: 1px solid var(--primary-color);
 }
 .header__search-input {
   outline: none;
@@ -378,10 +458,12 @@
   border-radius: 2px;
   border: 3px;
 }
+
 .header__search-btn-icon {
   padding: 5px 0px;
   width: 15px;
 }
+
 .header__search-btn:hover {
   background-color: #e65c40;
   cursor: pointer;
@@ -412,6 +494,17 @@
   justify-content: space-around;
   cursor: pointer;
 }
+.header__search-option-item:hover {
+  background-color: rgb(244, 243, 243);
+}
+.header__search-option-item:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.header__search-option-item:last-child {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
 .header__search-option-item span {
   font-size: 1.4rem;
   color: var(--text-color);
@@ -437,6 +530,107 @@
   position: absolute;
   left: 0;
   width: 100%;
-  top: 100%;
+  top: 190%;
   background-color: var(--white-color);
+  border-radius: 3px;
+  box-shadow: 0 1px 3px;
+  display: none;
+}
+.header__search-history-heading {
+  margin: 8px 8px;
+  font-size: 1.2rem;
+  color: var(--boder-color);
+}
+
+.header__search-history-item {
+  /* height: 38px; */
+  padding: 8px 8px;
+  font-size: 1.4rem;
+}
+.header__search-history-item:hover {
+  background-color: rgb(244, 243, 243);
+}
+.header__search-history-item a {
+  font-size: 1.4rem;
+  display: block;
+}
+.header__search-history-item:last-child {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.header__search-input:focus ~ .header__search-history {
+  /* Cú pháp element1 ~ element2 trong CSS Selector là một Adjacent Sibling Selector. 
+  Nó được sử dụng để chọn các phần tử element2 nằm ngay sau phần tử element1 trên cùng một cấp phân cấp tài liệu HTML. */
+  display: block;
+}
+/* ----------------------------------- has cart -------------------------------- */
+.header__cart-heading {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  margin: 8px 8px;
+}
+.header__cart-list-item {
+}
+.header__cart-item {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  display: flex;
+  margin-bottom: 3px;
+  align-items: center;
+}
+.header__cart-item:hover {
+  background-color: #f8f8f8;
+}
+.header__cart-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin: 0 8px;
+}
+.header__cart-item-info {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.header__cart-item-head {
+  display: flex;
+  justify-content: space-between;
+}
+.header__cart-item-heading-warp {
+  overflow: hidden;
+}
+.header__cart-item-name {
+  font-weight: 500;
+  width: 210px;
+  overflow: hidden;
+  white-space: nowarp;
+}
+.header__cart-item-warp {
+  margin-right: 8px;
+}
+.header__cart-item-price {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+.header__cart-item-multi {
+}
+.header__cart-item-soluong {
+}
+.header__cart-item-body {
+  display: flex;
+  justify-content: space-between;
+}
+.header__cart-item-des {
+}
+.header__cart-item-remove {
+  margin-right: 8px;
+}
+.header__cart-item-remove:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.btn {
+  margin: 10px 8px 8px 0;
+  float: right;
 }

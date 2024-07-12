@@ -60,8 +60,9 @@
                 <a
                   href="https://www.facebook.com/"
                   class="header__navbar-icon-link"
-                  ><i class="header__navbar-icon fa-brands fa-facebook"></i
-                ></a>
+                  >
+                  <i class="header__navbar-icon fa-brands fa-facebook"></i>
+                </a>
                 <a
                   href="https://www.instagram.com/"
                   class="header__navbar-icon-link"
@@ -150,13 +151,17 @@
                   giúp</a
                 >
               </li>
-              <li
+              <!-- <li
                 class="header__navbar-item header__navbar-item-bold header__navbar-item-gach"
               >
                 Đăng ký
               </li>
               <li class="header__navbar-item header__navbar-item-bold">
                 Đăng nhập
+              </li> -->
+              <li class="header__navbar-item header__navbar-user">
+                <img src="./img/ferrienZzZ.jpg" alt="" class="header__navbar-user-img">
+                <span class="header__navbar-user-name">van dao</span>
               </li>
             </ul>
           </nav>
@@ -212,7 +217,80 @@
               </div>
               <!-- ------------------- cart -------------------------- -->
               <div class="header__cart">
-                <i class="fa-solid fa-cart-shopping"></i>
+                <div class="header__cart-warp">
+                  <i class="header__cart-logo fa-solid fa-cart-shopping"></i>
+                  <span class="header__cart-notice">3</span>
+                  <!-- No cart: header__cart-list-no-cart -->
+                  <div class="header__cart-list ">                   
+                  <img src="./img/sad.jpg" alt="" class="header__cart-no-cart-img">
+                  <span class="header__cart-no-cart-meseage">Buy something bro!!!</span>
+                  <!-- has cart -->
+                   <h4 class="header__cart-heading">San pham da them</h4>
+                   <ul class="header__cart-list-item">
+
+                     <li class="header__cart-item">
+                      <img src="./img/5590893c84b7656b0777bd8ff07b80bd.jpg" alt="" class="header__cart-img">
+                      <div class="header__cart-item-info">
+                        <div class="header__cart-item-head">
+                          <div class="header__cart-item-heading-warp">
+                            <h5 class="header__cart-item-name">Bộ kem đòi quyền công dân </h5>
+                          </div>                         
+                          <div class="header__cart-item-warp">
+                            <span class="header__cart-item-price">2.000.000 vnđ</span>
+                            <span class="header__cart-item-multi">x</span>
+                            <span class="header__cart-item-soluong">2</span>
+                          </div>                         
+                        </div>
+                        <div class="header__cart-item-body">
+                          <span class="header__cart-item-des">Phân loại: hehe</span>
+                          <span class="header__cart-item-remove">delete</span>
+                        </div>
+                      </div>
+                    </li>
+
+                     <li class="header__cart-item">
+                      <img src="./img/ferrienWW.jpg" alt="" class="header__cart-img">
+                      <div class="header__cart-item-info">
+                        <div class="header__cart-item-head">
+                          <div class="header__cart-item-heading-warp">
+                            <h5 class="header__cart-item-name">Bộ kem đòi quyền công dân </h5>
+                          </div>                         
+                          <div class="header__cart-item-warp">
+                            <span class="header__cart-item-price">2.000.000 vnđ</span>
+                            <span class="header__cart-item-multi">x</span>
+                            <span class="header__cart-item-soluong">2</span>
+                          </div>                         
+                        </div>
+                        <div class="header__cart-item-body">
+                          <span class="header__cart-item-des">Phân loại: hehe</span>
+                          <span class="header__cart-item-remove">delete</span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="header__cart-item">
+                      <img src="./img/gojohehe.jpg" alt="" class="header__cart-img">
+                      <div class="header__cart-item-info">
+                        <div class="header__cart-item-head">
+                          <div class="header__cart-item-heading-warp">
+                            <h5 class="header__cart-item-name">Bộ kem đòi quyền công dân  </h5>
+                          </div>                         
+                          <div class="header__cart-item-warp">
+                            <span class="header__cart-item-price">2.000.000 vnđ</span>
+                            <span class="header__cart-item-multi">x</span>
+                            <span class="header__cart-item-soluong">2</span>
+                          </div>                         
+                        </div>
+                        <div class="header__cart-item-body">
+                          <span class="header__cart-item-des">Phân loại: hehe</span>
+                          <span class="header__cart-item-remove">delete</span>
+                        </div>
+                      </div>
+                    </li>
+                   </ul>
+                   <a class="btn btn--primary">Xem giỏ hàng</a>
+                  </div>
+                </div>
               </div>
         </div>
       </header>
